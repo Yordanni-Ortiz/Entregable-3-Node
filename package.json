@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server",
-    "dev": "nodemon src/server"
+    "dev": "nodemon src/server",
+    "test": "jest --detectOpenHandles",
+    "migrate:reset": "node ./src/tests/testMigrate.js",
+    "pretest": "npm run migrate:reset"
   },
   "keywords": [],
   "author": "",
